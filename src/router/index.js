@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+// import BlogView from "./views/BlogView"
 
 Vue.use(VueRouter)
 
@@ -13,8 +14,13 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: () => import('../views/AboutView.vue')
     // Imported AboutView this way.
+    component: () => import('../views/AboutView.vue')
+  },
+  {
+    path: "/blog/:id",
+    name: "blog1",
+    component: () => import('../views/BlogView.vue')
   }
 ]
 
